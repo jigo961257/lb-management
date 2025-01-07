@@ -87,7 +87,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { InputField } from "@/components/custom/index";
 import LogInIcon from "@/assets/images/LoginIcon.svg";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import { useAuth } from "@/context/AuthContext";
+// import { useAuth } from "@/context/AuthContext";
 import { Controller, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -100,7 +100,7 @@ const schema = z.object({
 
 const LoginPage = () => {
 	const navigation = useNavigate()
-	const { control, handleSubmit, formState: { errors, }, setValue, getValues, trigger } = useForm({
+	const { control, handleSubmit, formState: { errors, }, trigger } = useForm({
 		resolver: zodResolver(schema),
 		mode: "onChange", // Validate on every change
 		reValidateMode: "onChange",
