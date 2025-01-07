@@ -5,3 +5,5 @@ export const roles = [
     { id: 4, name: "Admin" },
     { id: 5, name: "Super Admin" }
 ]
+
+export const API_URL = "https://pleased-presumably-egret.ngrok-free.app"

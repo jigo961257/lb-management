@@ -1,7 +1,9 @@
+import { API_URL } from "@/constants/Constant";
+
 export const routes = {
     generic: {
         GET_KNOWN_LANGUAGE: {
-            url: "https://pleased-presumably-egret.ngrok-free.app/generic/get-languages",
+            url: API_URL + "/generic/get-languages",
             title: "get known language"
         }
 

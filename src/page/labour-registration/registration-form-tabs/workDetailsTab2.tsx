@@ -1,11 +1,11 @@
 import { InputField } from '@/components/custom'
 import FormContainer from '@/components/FormContainer'
+import { zodResolver } from "@hookform/resolvers/zod"
 import { ArrowLeft, SaveIcon } from 'lucide-react'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Controller, useForm } from "react-hook-form"
+// import { useNavigate } from 'react-router-dom'
 import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
 
 // Define the schema
 const schema = z.object({
@@ -25,11 +25,11 @@ const schema = z.object({
 
 
 
-const WorkDetailsTab2 = ({ setActiveTab, formData, setFormData }: { setActiveTab: React.Dispatch<React.SetStateAction<string>> }) => {
+const WorkDetailsTab2 = ({ setActiveTab, }: { setActiveTab: React.Dispatch<React.SetStateAction<string>>, setFormData: any, formData: any }) => {
 
-    const navigation = useNavigate()
+    // const navigation = useNavigate()
 
-    const { control, handleSubmit, formState: { errors, }, setValue, getValues } = useForm({
+    const { control, handleSubmit, formState: { errors, }, getValues } = useForm({
         resolver: zodResolver(schema)
     })
 

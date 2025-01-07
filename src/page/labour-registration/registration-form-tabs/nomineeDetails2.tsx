@@ -334,7 +334,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
-const NomineeDetails2 = ({ setActiveTab, formData, setFormData }: { setActiveTab: React.Dispatch<React.SetStateAction<string>> }) => {
+const NomineeDetails2 = ({ setActiveTab, formData, setFormData }: { setActiveTab: React.Dispatch<React.SetStateAction<string>>, formData: any, setFormData: any }) => {
     const { control, handleSubmit, formState: { errors } } = useForm<FormData>({
         resolver: zodResolver(schema),
         defaultValues: {
